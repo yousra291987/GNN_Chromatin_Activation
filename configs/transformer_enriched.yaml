@@ -1,0 +1,42 @@
+# =============================================================================
+# Project 3e — TransformerConv with enriched features (12 features)
+#
+# Features: 3 ChIP + 3 ratios + 1 width + 1 is_promoter + 3 graph topology
+# Edges: continuous CHiCAGO scores (all edges, log-transformed)
+# =============================================================================
+
+data:
+  nodes_path: "data/input/nodes.tsv"
+  edges_path: "data/input/edges.tsv"
+  coordinates_path: "data/input/coordinates.tsv"
+  min_score: 0.0
+  timepoint: "E8.5"
+  add_self_loops: true
+  connected_only: false
+  edge_transform: "log"
+  use_ratios: true
+  use_coordinates: true
+  use_graph_features: true
+  use_node_type: true
+  train_ratio: 0.7
+  val_ratio: 0.15
+  seed: 42
+
+model:
+  name: "transformer"
+  hidden_channels: 64
+  num_layers: 3
+  dropout: 0.3
+  heads: 4
+  edge_dim: 1
+
+training:
+  epochs: 200
+  lr: 0.001
+  weight_decay: 0.0005
+  patience: 30
+  device: "cpu"
+
+output:
+  save_dir: "models/transformer_enriched"
+  figures_dir: "figures/transformer_enriched"
