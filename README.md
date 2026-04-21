@@ -2,7 +2,7 @@
 
 **Can we predict which regulatory elements will activate during cranial neural crest cell (CNCC) migration using graph neural networks on chromatin interaction networks?**
 
-This project applies GNNs to CHiCAGO-scored chromatin interaction data from [our Nature Communications paper](https://doi.org/10.1038/s41467-024-53613-7) on Polycomb-mediated chromatin topology in craniofacial development.
+This project applies GNNs to CHiCAGO-scored chromatin interaction data from [our Nature Communications paper] on Polycomb-mediated chromatin topology in craniofacial development.
 
 ## Key Finding
 
@@ -49,4 +49,4 @@ PyTorch, PyTorch Geometric, scikit-learn, UMAP, matplotlib, seaborn
 
 ## Author
 
-Yousra Ben Zouari — [Nature Communications paper](https://doi.org/10.1038/s41467-024-53613-7)
+Yousra Ben Zouari — [Nature Communications paper]
